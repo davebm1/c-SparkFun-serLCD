@@ -1,8 +1,8 @@
-# SparkFun SerLCD - RGB Backlight [(Qwiic)](https://www.sparkfun.com/products/16398)
+# SparkFun SerLCD - RGB Backlight (Qwiic)
 
 ## C language i2c demonstration code for the Raspberry Pi
 
-Tested with: Raspberry Pi 4B / Raspbian GNU/Linux 11 (bullseye) with the SparkFun 20x4 serLCD.
+Tested with: Raspberry Pi 4B / Raspbian GNU/Linux 11 (bullseye) with the [SparkFun 20x4 serLCD](https://www.sparkfun.com/products/16398).
 
 This code is ported with reference to this [python script](https://github.com/shigeru-kawaguchi/Python-SparkFun-SerLCD) and this [Arduino library](https://github.com/sparkfun/SparkFun_SerLCD_Arduino_Library).
 
