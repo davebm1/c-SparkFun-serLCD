@@ -3,3 +3,4 @@ example
 *.o
 *.so
 *.py
+*.nix
