@@ -1,10 +1,19 @@
-# SparkFun SerLCD - RGB Backlight (Qwiic)
+# SparkFun SerLCD - RGB Backlight [(Qwiic)](https://www.sparkfun.com/products/16398)
 
 ## C language i2c demonstration code for the Raspberry Pi
 
 Tested with: Raspberry Pi 4B / Raspbian GNU/Linux 11 (bullseye) with the SparkFun 20x4 serLCD.
 
-This code is ported with reference to the python script [here](https://github.com/shigeru-kawaguchi/Python-SparkFun-SerLCD) and the Arduino library [here](https://github.com/sparkfun/SparkFun_SerLCD_Arduino_Library).
+This code is ported with reference to this [python script](https://github.com/shigeru-kawaguchi/Python-SparkFun-SerLCD) and this [Arduino library](https://github.com/sparkfun/SparkFun_SerLCD_Arduino_Library).
+
+---
+
+### Quick Start
+
+1. edit DEV_PATH and I2C_ADDRESS in example.h as necessary
+2. make
+3. ./example
+4. ctrl-c to terminate
 
 ---
 This is C language demonstration code for the above liquid crystal display module. The included control functions are a minimum set to :-
@@ -14,7 +23,7 @@ This is C language demonstration code for the above liquid crystal display modul
 3. create and display custom characters.
 4. provide a subset of basic control commands (function declarations in serLCD.h).
 
-It is not a comprehensive port of the above repositories and connection is via i2c only. Displayed strings should be a maximum of 20 characters in length as overflow to the next line can be inconsistent.
+It is not a comprehensive port of the above repositories and connection is via i2c only. Displayed strings should be a maximum of 20 characters in length (for the 20x4 lcd) as overflow to the next line can be inconsistent. Control functions return 0 on success or a negative error number on failure.
 
 No fancy scrolling, I'm afraid! I found the various scrolling functions too unpredictable, even with the official python driver.
 
@@ -27,7 +36,6 @@ Settings prerequisites:
 2. sudo apt install libi2c-dev i2c-tools
 3. determine i2c busses with i2cdetect -l
 4. determine SerLCD device location and id with i2cdetect -y \<bus number\>
-5. edit DEV_PATH and I2C_ADDRESS in example.h as necessary
 
 Hardware prerequisites:
 
@@ -40,10 +48,3 @@ Hardware prerequisites:
 
     with the serLCD on i2c-1 and other devices on i2c-3.
 2. Put a 10k ohm pull down resistor on either one of the serLCD's RXI pins, to avoid random characters appearing on the display as a result of electrical noise pickup.
-
----
-Build / run
-
-1. make
-2. ./example
-3. ctrl-c to terminate
