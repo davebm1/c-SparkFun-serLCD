@@ -1,3 +1,6 @@
+#ifndef _SERLCD_H
+#define _SERLCD_H
+
 #include <stdint.h>
 
 /* Display */
@@ -61,3 +64,5 @@ int create_char(int fd, uint8_t location, uint8_t char_map[]);
 int write_char(int fd, uint8_t location);
 int enable_splash(int fd);
 int disable_splash(int fd);
+
+#endif
