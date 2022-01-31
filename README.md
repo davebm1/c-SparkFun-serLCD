@@ -39,7 +39,9 @@ Settings prerequisites:
 
 Hardware prerequisites:
 
-1. You may see "[Errno 121] Remote I/O error" with the default Raspberry Pi i2c baud rate settings. This can be resolved by running at a lower baud rate (10k), as opposed to the default baud rate (100k). If you need higher baud rates for other i2c devices, these can be connected to a separate i2c bus. e.g. /boot/config.txt settings of :-
+1. You may see "[Errno 121] Remote I/O error" with the default Raspberry Pi i2c baud rate settings. This can be resolved by running at a lower baud rate (10k), as opposed to the default baud rate (100k). If you need higher baud rates for other i2c devices, these can be connected to a separate i2c bus.
+ 
+    e.g. /boot/config.txt i2c settings of:
 
     ```bash
     dtparam=i2c_arm=on,i2c_arm_baudrate=10000
