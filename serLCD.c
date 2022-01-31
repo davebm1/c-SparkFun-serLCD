@@ -19,7 +19,7 @@ int __print(int fd, const char *str) {
 
     for (i = 0; i < strlen(str); i++) {
         ret = i2c_smbus_write_byte(fd, str[i]);
-        __delay_milliseconds(10);
+        __delay_milliseconds(5);
         if (ret < 0) break;
     }
 
